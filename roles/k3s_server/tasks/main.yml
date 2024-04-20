@@ -162,6 +162,7 @@
         daemon_reload: true
         state: started
         enabled: true
+      retries: 5
 
     - name: Verify that all server nodes joined
       when: (groups['server'] | length) > 1

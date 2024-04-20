@@ -50,3 +50,4 @@
     daemon_reload: "{{ true if k3s_agent_service.changed else false }}"
     state: "{{ 'restarted' if k3s_agent_service.changed else 'started' }}"
     enabled: true
+  retries: 5
